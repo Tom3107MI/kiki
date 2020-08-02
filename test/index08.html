@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let arr = [5, 3, 8, 1];
+
+        function filterRangeInPlace(arr, a, b) {
+            arr.forEach((item, index) => {   //遍历数组
+                if (item < a || item > b) {  //筛选数组中介于a与b区间的所有值并删除
+                    arr.splice(index, 1);  //删除值，在原有的数组中删除，没有返回新的数组
+                }
+            });
+        }
+        filterRangeInPlace(arr, 1, 4);
+        alert(arr);
+
+        //
+
+        function filterRangeInPlace(arr, a, b) {
+
+            for (let i = 0; i < arr.length; i++) {
+                let val = arr[i];
+                if (val < a || val > b) {
+                    arr.splice(i, 1);
+                    i--;       //*实时删除，所以要i--，不然会漏了部分数组值
+                };
+            }
+        }
+    </script>
+</body>
+
+</html>

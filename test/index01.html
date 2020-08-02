@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* let timerId = setTimeout(function () {
+         alert("hello");
+       }, 5000);*/
+
+      /* function sayHi() {
+         alert("hello");
+       }
+       setTimeout(sayHi, 3000);
+
+       function sayHi(phrase, who) {
+         alert(phrase + "," + who);
+       }*/
+
+      /* function printNumbers(from, to) {
+        let curnent = from;
+        let timerId = setInterval(function () {
+          alert(curnent);
+          if (curnent == to) {
+            clearInterval(timerId);
+          }
+          curnent++;
+        }, 1000);
+      }
+      printNumbers(5, 10);*/
+
+      function printNumbers(from, to) {
+        let curnent = from;
+        let timerId = setTimeout(function go() {
+          alert(curnent);
+          if (curnent < to) {
+            setTimeout(go, 1000);
+          }
+          curnent++;
+        }, 1000);
+      }
+      printNumbers(5, 10);
+    </script>
+  </body>
+</html>

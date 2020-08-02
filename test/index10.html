@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ["HTML", "JavaScript", "CSS"];
+
+        function copySorted(arr) {
+            return arr.slice()    //复制arr的所有值返回新的数组
+                .sort();            // 原位正序排列
+        }
+
+        let sorted = copySorted(arr);
+
+        alert(sorted);
+
+    </script>
+</body>
+
+</html>

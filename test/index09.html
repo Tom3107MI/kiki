@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [5, 2, 1, -10, 8];
+        arr.sort(function (a, b) { return a - b });   //排序
+
+        arr.reverse();
+        alert(arr);
+
+        //
+        arr.sort((a, b) => b - a);    //降序
+        arr.sort((a, b) => a - b);     //升序
+
+
+    </script>
+</body>
+
+</html>

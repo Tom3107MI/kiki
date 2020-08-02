@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*   function User(name) {
+        this.name = name;
+        this.isAdmin = true;
+      }
+      let user = new User("tom"); //构造函数
+
+      alert(user.name); */
+
+      /* let user = new (function () {
+        this.name = "pete";
+        this.age = 30;
+      })();
+
+      alert(user.name);
+
+      function BigUser() {
+        this.name = "john";
+        return { name: "tom" }; //-->返回这个对象
+      }
+      alert(new BigUser().name);
+
+      function SmallUser() {
+        this.name = "pete";
+        return; //-->返回 this
+      }
+
+      alert(new SmallUser().name); //let user = new SmallUser();
+      // alert(user.name;) */
+
+      function User(name) {
+        this.name = name;
+        this.sayHi = function () {
+          alert("how are you ?");
+        };
+      }
+      let fire = new User("fire");
+
+      fire.sayHi();
+    </script>
+  </body>
+</html>

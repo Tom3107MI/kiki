@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function camelize(str) {
+      return str.split("-")  //将字符串"background-color"转换为数组["background","color"]
+        .map((item, index) => index == 0 ? item : item[0].toUpperCase() + item.slice(1)) //对没个元素调用方法，如果index == 0；返回新的数组元素item，如果 index > 0, 返回一个首字母大写的新元素
+        .join(""); //将数组['background','Color'] 转换成字符串"backgroundColor"
+    }
+    alert(camelize("background-color"));
+  </script>
+</body>
+
+</html>

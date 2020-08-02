@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*  function sayHi() {
+        alert(this.name);
+      }
+      let user = {
+        name: "tom",
+        age: 25,
+      };
+      user.f = sayHi;
+
+      user.f(); */
+
+      /* function sayHi() {
+        alert(this);
+      }
+      sayHi(); */
+      /*  let calculator = {
+        read() {
+          this.first = +prompt("请输入第一个值", "5");
+          this.second = +prompt("请输入第二个值", "6");
+        },
+        sum() {
+          return this.first + this.second;
+        },
+        mul() {
+          return this.first * this.second;
+        },
+      };
+      calculator.read();
+      alert(calculator.sum());
+      alert(calculator.mul()); */
+
+      let ladder = {
+        step: 0,
+        up() {
+          this.step++;
+          return this;
+        },
+        showStep() {
+          alert(this.step);
+          return this;
+        },
+      };
+      ladder.up().showStep();
+    </script>
+  </body>
+</html>

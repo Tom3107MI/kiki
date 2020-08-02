@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function filterRange(arr, a, b) {
+            return arr.filter((item) => item >= a && item <= b); //通过func过滤元素，返回使func返回true的所有值，返回的是一个新数组
+        }
+        let arr = [5, 3, 8, 1];
+
+        let filtered = filterRange(arr, 1, 4);
+
+        alert(filtered);
+        alert(arr);
+    </script>
+</body>
+
+</html>
