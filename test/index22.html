@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /* //第一种方式：递归
+        function sumTo(n) {
+            return (n == 1) ? n : n + sumTo(n - 1);
+        } */
+
+        //第二种方式：循环
+
+        /*   function sumTo(n) {
+              let sum = 0;
+              for (let i = 0; i <= n; i++) {
+                  sum += i;
+              }
+              return sum;
+          } */
+
+        //第三种方式：等差公式
+        function sumTo(n) {
+            return (n + 1) * (n / 2);
+        }
+
+
+        alert(sumTo(10));
+    </script>
+</body>
+
+</html>
