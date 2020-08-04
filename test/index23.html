@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let values = ["Hare", "Krishna", "Hare", "Krishna",
+            "Krishna", "Krishna", "Hare", "Hare", ":-O"
+        ];
+
+        /*  function unique(arr) {
+             let set = new Set();
+             for (let i = 0; i < arr.length; i++) {
+                 set.add(arr[i]);
+             }
+             return Array.from(set);      //菜鸟做法
+         }
+  */
+        //alert(unique(values));   //输出"Hare"， "Krishna" ,":-0"
+        function unique(arr) {
+            return Array.from(new Set(arr));
+        }
+
+
+    </script>
+</body>
+
+</html>
