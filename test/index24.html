@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Calculator() {
+            this.read = function () {
+                this.a = +prompt("aaaaa", "5");
+                this.b = +prompt("bbbbb", "4");
+            }
+            this.sum = function () {
+                return this.a + this.b;
+            }
+            this.mul = function () {
+                return this.a * this.b;
+            }
+
+
+        }
+
+        let calcuator = new Calculator();   //构造函数
+
+        calcuator.read();
+
+        alert("sum=" + calcuator.sum());   //9
+        alert("mul=" + calcuator.mul());   //20
+    </script>
+</body>
+
+</html>
