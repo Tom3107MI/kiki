@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let message = prompt("who's there?", '');
+        if (message == 'null' || message == "") {
+            alert('Canceled');   // 空字符串或取消了输入，显示 “Canceled.”
+        } else if (message == "Admin") {
+            let passWord = prompt("Password?", '');
+            if (passWord == "TheMaster") {
+                alert("Welcome!");  //如果输入的是 “TheMaster”，显示 “Welcome!”
+            } else if (passWord == 'null' || passWord == '') {
+                alert("Canceled");  //空字符串或取消了输入，显示 “Canceled.”
+            } else {
+                alert("Wrong passwords")  //其他字符串 —— 显示 “Wrong password”
+            };
+        } else {
+            alert('I don’t know you');  //如果是其他字符串 —— 显示 “I don’t know you”
+        }
+    </script>
+</body>
+
+</html>
