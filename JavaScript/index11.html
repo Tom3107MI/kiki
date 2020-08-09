@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //第一种方式
+        while (true) {
+            let value = prompt("请输入一个大于100的数字", '');
+            if (value > 100 || value == 'null' || value == '') break; //break跳出无限循环
+        };
+        //第二种方式
+        let value;
+        do {
+            value = prompt("请输入一个大于100的数字", '');
+
+        } while (value <= 100 && value);
+    </script>
+</body>
+
+</html>
