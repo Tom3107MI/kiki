@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Calculator() {
+            this.read = function () {
+                this.a = +prompt("请输入一个数值？", '5');
+                this.b = +prompt('请输入另一个数值？', '6');
+            };
+            this.sum = function () {
+                return this.a + this.b;
+            };
+            this.mul = function () {
+                return this.a * this.b;
+            };
+        }
+        let calculator = new Calculator();
+        calculator.read();
+
+        alert('sum = ' + calculator.sum());   //11
+        alert('mul = ' + calculator.mul());   //30
+    </script>
+</body>
+
+</html>
