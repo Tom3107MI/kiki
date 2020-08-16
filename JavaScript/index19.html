@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        if (!Function.prototype.defer) {  //如果这儿没有这个方法
+            //那就在prototype中添加它
+
+            Function.prototype.defer = function (n) {
+
+
+                return setTimeout(this, n);
+            };
+        }
+        function f() {
+            alert("hello");
+
+        }
+
+        f.defer(1000)
+    </script>
+</body>
+
+</html>

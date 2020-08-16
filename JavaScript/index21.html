@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo</h1>
+    <p id="pid">hello world</p>
+    <input id="input" type="text">
+    <br />
+    <button id="btn">按钮</button>
+    <script>
+        document.getElementById('btn').onclick = function () {
+            document.getElementById('pid').innerHTML = 'hello' + document.getElementById('input').value;
+        }
+    </script>
+</body>
+
+</html>

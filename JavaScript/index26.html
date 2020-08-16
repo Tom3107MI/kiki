@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: 'tom',
+            age: 25,
+            size: {
+                height: 180,
+                width: 65,
+            },
+        };
+
+        function cloneDeep(obj) {
+            let clone = {};
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    if (typeof obj[key] === 'object' && obj[key] !== null) {
+                        clone[key] = cloneDeep(obj[key]);  //递归复制
+                    } else {
+                        clone[key] = obj[key];
+                    }
+                }
+            }
+            return clone;
+
+
+        }
+
+        console.log(cloneDeep(user));   //user
+
+
+    </script>
+</body>
+
+</html>
