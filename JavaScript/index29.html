@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型 继承</title>
+</head>
+
+<body>
+    <script>
+        if (!Function.prototype.defer) {
+            Function.prototype.defer = function (ms) {
+                setTimeout(this, ms);
+            }
+        };
+
+        function f() {
+            alert("hello");
+        }
+
+        f.defer(1000);   //1秒后显示‘hello’
+    </script>
+</body>
+
+</html>
