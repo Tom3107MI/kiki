@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue实例</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in city">
+                {{ index+1 }}四大城市之一：{{ item }}
+            </li>
+        </ul>
+        <h2 v-for='item in fruits'>
+            {{item.name }}
+        </h2>
+        <button v-on:click='add'>增加</button>
+        <button @click="remove">减少</button>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                city: [
+                    '北京',
+                    '上海',
+                    '广州',
+                    '深圳'
+                ],
+                fruits: [
+                    { name: 'apple' },
+                    { name: 'banana' },
+                    { name: 'orange' },
+                ]
+            },
+            methods: {
+                add: function () {
+                    this.fruits.push({ name: 'watermelon' });
+                },
+                remove: function () {
+                    this.fruits.pop();
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
