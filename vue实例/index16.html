@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <ul id="app">
+        <li v-for='n in eventNumber'>{{ n }}</li>
+    </ul>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                numbers: [1, 2, 3, 4, 5]
+            },
+            computed: {
+                eventNumber: function () {
+                    return this.numbers.filter(function (number) {
+                        return number % 2 === 0;
+                    });
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

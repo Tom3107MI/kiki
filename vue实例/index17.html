@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul v-for='number in numbers'>
+            <li v-for='n in number'>
+                {{n}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                numbers: [
+                    [1, 2, 3, 4, 5],
+                    [6, 7, 8, 9, 10]
+                ]
+            },
+            methods: {
+                event: function (number) {
+                    return number.filter(function (n) {
+                        return n % 2 === 0;
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

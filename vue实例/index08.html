@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue实例</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+        <button @click='changeText'>修改</button>
+    </div>
+    <script>
+        var data = {
+            name: 'tom',
+            age: 25
+        };
+
+        Object.freeze(data);  //阻止修改现有的property
+
+        var vm = new Vue({
+            el: '#app',
+            data: data,
+            methods: {
+                changeText: function () {
+                    this.name = 'mae';
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

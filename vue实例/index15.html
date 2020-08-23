@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul id="v-for-object">
+            <li v-for='(value,att,index) of object'>
+                {{index}} {{att}} {{value}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#v-for-object',
+            data: {
+                object: {
+                    name: 'tom',
+                    age: 25,
+                    height: 180
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ fullName }}</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                firstname: 'tom',
+                lastname: 'nike'
+            },
+            computed: {
+                fullName: {
+                    get: function () {
+                        return this.firstname + ' ' + this.lastname
+                    },
+                    set: function (newValue) {
+                        var name = newValue.split(' ');
+                        this.firstname = name[0];
+                        this.lastname = name[name.length - 1]
+                    },
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
